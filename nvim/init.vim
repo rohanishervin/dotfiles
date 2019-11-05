@@ -284,3 +284,13 @@ nmap <silent> <leader>en <Plug>(coc-diagnostic-next)
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
+" Terminal
+tnoremap <Esc><Esc> <C-\><C-n>
+tnoremap <C-h> <C-\><C-N><C-w>h
+tnoremap <C-j> <C-\><C-N><C-w>j
+tnoremap <C-k> <C-\><C-N><C-w>k
+tnoremap <C-l> <C-\><C-N><C-w>l
+
+" split window
+noremap <Leader>h :<C-u>split<CR>
+noremap <Leader>v :<C-u>vsplit<CR>
