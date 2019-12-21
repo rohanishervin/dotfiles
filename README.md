@@ -10,7 +10,13 @@
  - i3-style
 
 ## Installation
-clone the repository, then:
+clone the repository, 
+```bash
+git clone --recurse-submodules https://github.com/rohanishervin/dotfiles.git
+```
+
+
+then:
 
 ```bash
 cd .dotfiles

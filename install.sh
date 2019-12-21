@@ -47,3 +47,8 @@ ln -sf "$PWD/git/config" "$HOME/.gitconfig"
 # rofi
 rm -rf $HOME/.config/rofi
 ln -sf $PWD/rofi $HOME/.config/rofi
+
+# spacemacs
+rm -rf "$HOME/.emacs.d"
+ln -sf "$PWD/emacs.d" "$HOME/.emacs.d"
+ln -sf "$PWD/spacemacs/spacemacs" "$HOME/.spacemacs"
