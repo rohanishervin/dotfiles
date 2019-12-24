@@ -44,7 +44,7 @@ export PASSWORD_STORE_TOMB_KEY="$TOMBS/my/pass.tomb.key" # for pass-tomb
 
 setopt HIST_IGNORE_SPACE
 
-alias vim=nvim
+alias vim='nvim'
 
 # powerlevel
 DEFAULT_USER='shervin'
