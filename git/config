@@ -1,3 +1,6 @@
 [user]
     name = Shervin Rohani
     email = shervin.rohani72@gmail.com
+
+[includeIf "gitdir:~/Workspace/"]
+    path = ~/Workspace/.gitconfig-work
