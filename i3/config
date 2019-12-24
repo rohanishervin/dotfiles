@@ -213,3 +213,6 @@ client.urgent #373b41 #cc6666 #ffffff #cc6666
 
 # add farsi keyboard
 exec_always setxkbmap -layout us,ir -option 'grp:menu_toggle'
+
+# safeeyes
+exec --no-startup-id safeeyes
