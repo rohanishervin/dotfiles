@@ -12,7 +12,7 @@
 ## Installation
 clone the repository, 
 ```bash
-git clone --recurse-submodules https://github.com/rohanishervin/dotfiles.git
+git clone --recurse-submodules https://github.com/rohanishervin/dotfiles.git ./.dotfiles
 ```
 
 
