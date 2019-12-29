@@ -54,7 +54,7 @@ values."
      spell-checking
      syntax-checking
      ;; version-control
-     emacs-ipython-notebook
+     ipython-notebook
      )
 
    ;; List of additional packages that will be installed without being
