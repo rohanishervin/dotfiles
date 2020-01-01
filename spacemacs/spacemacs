@@ -33,13 +33,14 @@ values."
    '(
      graphviz
      python
+     ranger
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
-     ;; better-defaults
+     better-defaults
      (auto-completion :variables
                       auto-completion-tab-key-behavior 'cycle
                       auto-completion-complete-with-key-sequence "jk"
@@ -69,7 +70,10 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(jedi
+                                      jedi-core
+                                      pydoc
+                                      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -324,8 +328,13 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (eval-after-load "company"
-    '(add-to-list 'company-backends 'company-anaconda))
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   `((emacs-lisp . t)
+     (lisp . t)
+     (python . t)
+     (ein . t)
+     ))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
