@@ -42,6 +42,9 @@ export TOMBS="$HOME/Tombs"
 export PASSWORD_STORE_TOMB_FILE="$TOMBS/pass.tomb" # for pass-tomb
 export PASSWORD_STORE_TOMB_KEY="$TOMBS/my/pass.tomb.key" # for pass-tomb
 
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 setopt HIST_IGNORE_SPACE
 
 alias vim='nvim'
