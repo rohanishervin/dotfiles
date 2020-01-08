@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-#name : shouldComponentUpdate
-#key : scu
-#contributor : 
-# --
-shouldComponentUpdate(nextProps, nextState) {
-  $0
-  return true;
-}
