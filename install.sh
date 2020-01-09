@@ -51,7 +51,9 @@ ln -sf $PWD/rofi $HOME/.config/rofi
 # spacemacs
 rm -rf "$HOME/.emacs.d"
 if [ ! -d "$PWD/emacs.d" ]; then
-    git clone -b develop https://github.com/syl20bnr/spacemacs $PWD/emacs.d 
+    cd $PWD/emacs.d;
+    git checkout develop;
+    cd -
 fi
 ln -sf "$PWD/emacs.d" "$HOME/.emacs.d"
 ln -sf "$PWD/spacemacs/spacemacs" "$HOME/.spacemacs"
