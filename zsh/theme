@@ -73,7 +73,7 @@ then
     POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
     # https://github.com/bhilburn/powerlevel9k/tree/next#customizing-prompt-segments
     POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir_writable dir vcs)
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
+    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs pyenv virtualenv)
 
     # Set 'context' segment colors
     # https://github.com/bhilburn/powerlevel9k/blob/next/segments/context/README.md
@@ -133,4 +133,22 @@ then
     POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND=$P9KGT_TERMINAL_BACKGROUND
     POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND=$P9KGT_YELLOW
 
+    # pyenv
+    POWERLEVEL9K_PYTHON_ICON="\uf3e2"
+    POWERLEVEL9K_PYENV_BACKGROUND="clear"
+    POWERLEVEL9K_PYENV_FOREGROUND="lightcoral"
+
+    # virtualenv
+    POWERLEVEL9K_VIRTUALENV_BACKGROUND="clear"
+    POWERLEVEL9K_VIRTUALENV_FOREGROUND="mediumspringgreen"
+
 fi
+
+plugins=(
+    git
+    python
+    virtualenv
+    pip
+    docker
+    sudo
+    )
