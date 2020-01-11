@@ -65,7 +65,10 @@ values."
      syntax-checking
      version-control
      docker
-     ipython-notebook
+     (ipython-notebook :variables
+                       ein:use-auto-complete t
+                       ein:complete-on-dot t
+                       ein:completion-backend 'ein:use-company-backend)
      github
      )
    ;; List of additional packages that will be installed without being
