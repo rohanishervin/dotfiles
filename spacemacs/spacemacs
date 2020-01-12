@@ -70,6 +70,9 @@ values."
                        ein:complete-on-dot t
                        ein:completion-backend 'ein:use-company-backend)
      github
+     (neotree :variables
+              neo-theme 'nerd)
+     pdf
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
