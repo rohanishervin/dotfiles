@@ -30,7 +30,7 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(csv
      yaml
      html
      lsp
@@ -59,9 +59,9 @@ values."
           org-enable-reveal-js-support t)
      (shell :variables
             shell-default-height 30
-            shell-default-shell 'eshell
+            shell-default-shell 'shell
             shell-default-position 'bottom)
-     spell-checking
+     '((spell-checking :variables spell-checking-enable-auto-dictionary t))
      syntax-checking
      version-control
      docker
