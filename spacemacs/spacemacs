@@ -326,14 +326,22 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (with-eval-after-load 'org
-    (setq
-     org-todo-keywords '((sequence "TODO" "DONE" "WAITING" "CANCELLED")))
-    (setq org-todo-keyword-faces
-          '(("WAITING" . "yellow") ("CANCELLED" . "grey")))
-    ;; gtd 
-    (setq org-agenda-files '("~/gtd/inbox.org"
-                             "~/gtd/gtd.org"
-                             "~/gtd/tickler.org"))
+    (setq org-default-notes-file "~/Sync/gtd/inbox.org"
+          org-agenda-files '("~/Sync/gtd/inbox.org"
+                             "~/Sync/gtd/gtd.org"
+                             "~/Sync/gtd/tickler.org")
+          org-capture-templates '(("t" "Todo [inbox]" entry
+                                   (file+headline "~/Sync/gtd/inbox.org" "Tasks")
+                                   "* TODO %i%?")
+                                  ("T" "Tickler" entry
+                                   (file+headline "~/Sync/gtd/tickler.org" "Tickler")
+                                   "* %i%? \n %U"))
+          org-refile-targets '(("~/gtd/gtd.org" :maxlevel . 3)
+                               ("~/gtd/someday.org" :level . 1)
+                               ("~/gtd/tickler.org" :maxlevel . 2))
+          org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)"))
+          )
+
     )
   )
 
