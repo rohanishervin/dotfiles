@@ -337,12 +337,14 @@ you should place your code here."
                                   ("T" "Tickler" entry
                                    (file+headline "~/Sync/gtd/tickler.org" "Tickler")
                                    "* %i%? \n %U"))
-          org-refile-targets '(("~/gtd/gtd.org" :maxlevel . 3)
-                               ("~/gtd/someday.org" :level . 1)
-                               ("~/gtd/tickler.org" :maxlevel . 2))
-          org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)"))
+          org-refile-targets '(("~/Sync/gtd/gtd.org" :maxlevel . 3)
+                               ("~/Sync/gtd/someday.org" :level . 1)
+                               ("~/Sync/gtd/tickler.org" :maxlevel . 2))
+          org-todo-keywords '((sequence "TODO" "WAITING" "|" "DONE" "CANCELLED"))
+          org-global-properties '(("Effort_ALL" .
+                                   "0:15 0:30 0:45 1:00 2:00 3:00 4:00 5:00 6:00 0:00"))
+          org-clock-idle-time 15
           )
-
     )
   )
 
