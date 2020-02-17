@@ -1,9 +1,15 @@
 # load theme
 source "${HOME}/.dotfiles/zsh/theme"
+
 # load zgen
 source "${HOME}/.dotfiles/zgen/zgen.zsh"
 
-source "/etc/profile.d/autojump.zsh"
+# load fzf confing
+source "${HOME}/.dotfiles/zsh/fzf.zsh"
+
+# autojump 
+source /etc/profile.d/autojump.zsh
+
 
 # check if there's no init script
 if ! zgen saved; then
@@ -50,8 +56,10 @@ export PASSWORD_STORE_TOMB_KEY="$TOMBS/my/pass.tomb.key" # for pass-tomb
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500' "
+
+
 
 setopt HIST_IGNORE_SPACE
 
 alias vim='nvim'
-
