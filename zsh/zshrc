@@ -3,6 +3,8 @@ source "${HOME}/.dotfiles/zsh/theme"
 # load zgen
 source "${HOME}/.dotfiles/zgen/zgen.zsh"
 
+source "/etc/profile.d/autojump.zsh"
+
 # check if there's no init script
 if ! zgen saved; then
     echo "Creating a zgen save"
