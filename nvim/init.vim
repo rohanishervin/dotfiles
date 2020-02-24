@@ -294,3 +294,6 @@ tnoremap <C-l> <C-\><C-N><C-w>l
 " split window
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
+
+" ESC 
+inoremap jk <Esc>

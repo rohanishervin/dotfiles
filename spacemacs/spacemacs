@@ -57,12 +57,13 @@ values."
      git
      markdown
      (org :variables
-          org-enable-reveal-js-support t)
+          org-enable-reveal-js-support t
+          org-enable-trello-support t)
      (shell :variables
             shell-default-height 30
             shell-default-shell 'eshell
             shell-default-position 'bottom)
-     '((spell-checking :variables spell-checking-enable-auto-dictionary t))
+     (spell-checking :variables spell-checking-enable-auto-dictionary t)
      syntax-checking
      version-control
      docker
