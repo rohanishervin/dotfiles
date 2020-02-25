@@ -296,4 +296,4 @@ noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
 
 " ESC 
-inoremap jk <Esc>
+inoremap fd <Esc>
