@@ -7,3 +7,5 @@
 [github]
 	user = rohanishervin
 	oauth-token = 94a9b62301f38f833ef4276e93a72f4ec6753432
+[credential]
+	helper = store
