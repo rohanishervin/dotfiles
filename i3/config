@@ -220,13 +220,13 @@ exec_always setxkbmap -layout us,ir -option 'grp:menu_toggle'
 exec --no-startup-id safeeyes
 
 # shutdown and other stuff
-bindsym $mod+o mode "$mode_system"
-set $mode_system (l) lock, (e) exit ,(s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $Locker i3lock -c 999999 && sleep 1
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock -c 999999, mode "default"
+    bindsym l exec --no-startup-id $Locker, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
 
@@ -234,3 +234,5 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
+bindsym $mod+o mode "$mode_system"
