@@ -54,9 +54,13 @@ ln -sf "$PWD/emacs.d" "$HOME/.emacs.d"
 ln -sf "$PWD/spacemacs/spacemacs" "$HOME/.spacemacs"
 
 # matplotlib
-rm -rf "$HOME/.matplotlib/matplotlibrc"
+rm -rf "$HOME/.matplotlib/"
 mkdir "$HOME/.matplotlib/"
 ln -sf "$PWD/matplotlib/matplotlibrc" "$HOME/.matplotlib/"
+
+# rofi
+rm -rf "$HOME/.config/rofi"
+ln -sf "$PWD/rofi" "$HOME/.config/rofi"
 
 # output a congrats :)
 echo "Congrats!!, you've just installed all the configs :)"
