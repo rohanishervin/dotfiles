@@ -1,0 +1,12 @@
+jedi>=0.13.0
+json-rpc>=1.8.1
+service_factory>=0.1.5
+flake8
+yapf
+autoflake
+isort
+importmagic
+epc
+pyls-isort
+pyls-mypy
+pyls-black

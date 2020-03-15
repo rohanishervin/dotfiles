@@ -62,5 +62,11 @@ ln -sf "$PWD/matplotlib/matplotlibrc" "$HOME/.matplotlib/"
 rm -rf "$HOME/.config/rofi"
 ln -sf "$PWD/rofi" "$HOME/.config/rofi"
 
+# SpaceVim
+rm -rf "$HOME/.SpaceVim"
+rm -rf "$HOME/.SpaceVim.d"
+curl -sLf "https://spacevim.org/install.sh" | bash -s -- --install neovim
+ln -sf "$PWD/SpaceVim" "$HOME/.SpaceVim.d"
+
 # output a congrats :)
 echo "Congrats!!, you've just installed all the configs :)"
