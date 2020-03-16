@@ -24,8 +24,8 @@
 
 [[layers]]
   name = 'shell'
-  default_position = 'top'
-  default_height = 30
+  default_position = 'bottom'
+  default_height = 25
 
 [[layers]]
   name = "lang#python"
