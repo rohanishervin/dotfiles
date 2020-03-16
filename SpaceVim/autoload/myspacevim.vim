@@ -1,8 +1,5 @@
-function! myspacevim#before() abort
-  nnoremap fd <Esc>
-endfunction
-
 function! myspacevim#after() abort
-  iunmap fd
+  call SpaceVim#logger#info("bootstrap_after called")     " log bootstrap_after call
+  inoremap fd <Esc>
+  tnoremap fd <C-\><C-n>
 endfunction
-

@@ -8,9 +8,13 @@
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
     automatic_update = true
-    bootstrap_before = "myspacevim#before"
-    bootstrap_after = "myspacevim#after"
     autocomplete_method = "coc"
+    vimcompatible = true
+    filemanager = "vimfiler"
+    
+    # dont add options after this line
+    # bootstrap_before = "myspacevim#before"
+    bootstrap_after = "myspacevim#after"
 
 
 [[layers]]
