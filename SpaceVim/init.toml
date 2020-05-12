@@ -29,15 +29,3 @@
 
 [[layers]]
   name = "lang#python"
-
-# helps coc to work better
-[[layers]] 
-  name = 'lsp'
-  filetypes = [
-    'python'
-  ]
-#  [layers.override_cmd]
-#    c = ['ccls', '--log-file=/tmp/ccls.log']
-#    cpp = ['ccls', '--log-file=/tmp/ccls.log']
-
-
