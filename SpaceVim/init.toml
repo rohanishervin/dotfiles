@@ -28,3 +28,7 @@
 
 [[layers]]
   name = "lang#python"
+  format_on_save=1
+
+[[layers]]
+  name = "lang#vue"
