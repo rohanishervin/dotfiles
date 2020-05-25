@@ -253,3 +253,10 @@ assign [class="TelegramDesktop"] $ws6
 
 # move some to other workspaces
 for_window [class="Spotify"] move to workspace $ws7
+
+# autostart
+exec i3-msg 'workspace 1:; exec kitty'
+exec emacs
+exec firefox
+exec chromium
+exec telegram-desktop
