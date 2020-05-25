@@ -242,3 +242,14 @@ mode "$mode_system" {
 
 bindsym $mod+o mode "$mode_system"
 
+# open in floating mode
+for_window [class="Emacs"] floating enable
+
+# open in specific workspace
+assign [class="Emacs"] $ws2
+assign [class="firefox"] $ws3
+assign [class="Chromium"] $ws4
+assign [class="TelegramDesktop"] $ws6
+
+# move some to other workspaces
+for_window [class="Spotify"] move to workspace $ws7
