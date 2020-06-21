@@ -53,6 +53,11 @@ rm -rf "$HOME/.emacs.d"
 ln -sf "$PWD/emacs.d" "$HOME/.emacs.d"
 ln -sf "$PWD/spacemacs/spacemacs" "$HOME/.spacemacs"
 
+# doom emacs
+# rm -rf "$HOME/.emacs.d"
+# rm -rf "$HOME/.doom.d"
+# ln -sf "$PWD/doom" "$HOME/.doom.d"
+
 # matplotlib
 rm -rf "$HOME/.matplotlib/"
 mkdir "$HOME/.matplotlib/"
