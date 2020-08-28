@@ -49,14 +49,15 @@ rm -rf $HOME/.config/rofi
 ln -sf $PWD/rofi $HOME/.config/rofi
 
 # spacemacs
-rm -rf "$HOME/.emacs.d"
-ln -sf "$PWD/emacs.d" "$HOME/.emacs.d"
-ln -sf "$PWD/spacemacs/spacemacs" "$HOME/.spacemacs"
+# rm -rf "$HOME/.emacs.d"
+# ln -sf "$PWD/emacs.d" "$HOME/.emacs.d"
+# ln -sf "$PWD/spacemacs/spacemacs" "$HOME/.spacemacs"
 
 # doom emacs
-# rm -rf "$HOME/.emacs.d"
-# rm -rf "$HOME/.doom.d"
-# ln -sf "$PWD/doom" "$HOME/.doom.d"
+rm -rf "$HOME/.emacs.d"
+rm -rf "$HOME/.doom.d"
+ln -sf "$PWD/emacs.doom" "$HOME/.emacs.d"
+ln -sf "$PWD/doom" "$HOME/.doom.d"
 
 # matplotlib
 rm -rf "$HOME/.matplotlib/"
