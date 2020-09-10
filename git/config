@@ -1,9 +1,9 @@
 [user]
 	name = Shervin Rohani
-	email = shervin.rohani@iranrenter.com
+	email = shervin.rohani72@gmail.com
 
 [includeIf "gitdir:~/Workspace/"]
-    path = ~/Workspace/.gitconfig-work
+   path = ~/Workspace/.gitconfig-work
 
-[includeIf "gitdir:~/Workspace/gh/"]
-    path = ~/Workspace/gh/.gitconfig
+[includeIf "gitdir:~/Workspace/39/"]
+   path = ~/Workspace/39/.gitconfig-39
