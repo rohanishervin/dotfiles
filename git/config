@@ -5,5 +5,5 @@
 [includeIf "gitdir:~/Workspace/"]
    path = ~/Workspace/.gitconfig-work
 
-[includeIf "gitdir:~/Workspace/39/"]
-   path = ~/Workspace/39/.gitconfig-39
+[includeIf "gitdir:~/w/39"]
+   path = ~/w/39/.gitconfig-39

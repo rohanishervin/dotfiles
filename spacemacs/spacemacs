@@ -39,7 +39,7 @@ This function should only modify configuration layer settings."
      (python :variables ;; python-backend 'lsp
              ;; python-lsp-server 'pyls
              python-backend 'anaconda
-             python-formatter 'yapf
+             python-formatter 'black
              python-format-on-save nil
              python-fill-column 99
              python-sort-imports-on-save nil)
@@ -60,6 +60,12 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-reveal-js-support t)
      git
+     (shell :variables
+            shell-default-height 30
+            shell-default-shell 'vterm
+            shell-enable-smart-eshell t
+            shell-default-position 'bottom)
+     c-c++
      )
 
 
@@ -380,7 +386,7 @@ It should only modify the values of Spacemacs settings."
    ;;   :size-limit-kb 1000)
    ;; When used in a plist, `visual' takes precedence over `relative'.
    ;; (default nil)
-   dotspacemacs-line-numbers t
+   dotspacemacs-line-numbers 'relative
 
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
@@ -521,7 +527,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(doom-themes tide typescript-mode tern nodejs-repl livid-mode skewer-mode js2-refactor multiple-cursors js2-mode js-doc import-js grizzl helm-gtags ggtags flycheck dap-mode posframe lsp-treemacs bui lsp-mode treemacs pfuture lv ht dash-functional counsel-gtags counsel swiper ivy add-node-modules-path vmd-mode mmm-mode markdown-toc markdown-mode gh-md emoji-cheat-sheet-plus company-emoji yasnippet-snippets yapfify yaml-mode ws-butler writeroom-mode winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tagedit symon symbol-overlay string-inflection spaceline-all-the-icons slim-mode scss-mode sass-mode restart-emacs request rainbow-delimiters pytest pyenv-mode py-isort pug-mode prettier-js popwin pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox org-superstar org-re-reveal org-projectile org-present org-pomodoro org-mime org-download org-cliplink org-brain open-junk-file neotree move-text lorem-ipsum live-py-mode link-hint indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-ls-git helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot fuzzy font-lock+ flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu emmet-mode editorconfig dumb-jump dotenv-mode diminish devdocs define-word cython-mode csv-mode company-web company-statistics company-quickhelp company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol aggressive-indent ace-window ace-link ace-jump-helm-line ac-ispell)))
+   '(edit-indirect doom-themes tide typescript-mode tern nodejs-repl livid-mode skewer-mode js2-refactor multiple-cursors js2-mode js-doc import-js grizzl helm-gtags ggtags flycheck dap-mode posframe lsp-treemacs bui lsp-mode treemacs pfuture lv ht dash-functional counsel-gtags counsel swiper ivy add-node-modules-path vmd-mode mmm-mode markdown-toc markdown-mode gh-md emoji-cheat-sheet-plus company-emoji yasnippet-snippets yapfify yaml-mode ws-butler writeroom-mode winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tagedit symon symbol-overlay string-inflection spaceline-all-the-icons slim-mode scss-mode sass-mode restart-emacs request rainbow-delimiters pytest pyenv-mode py-isort pug-mode prettier-js popwin pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox org-superstar org-re-reveal org-projectile org-present org-pomodoro org-mime org-download org-cliplink org-brain open-junk-file neotree move-text lorem-ipsum live-py-mode link-hint indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-ls-git helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot fuzzy font-lock+ flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu emmet-mode editorconfig dumb-jump dotenv-mode diminish devdocs define-word cython-mode csv-mode company-web company-statistics company-quickhelp company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol aggressive-indent ace-window ace-link ace-jump-helm-line ac-ispell)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
